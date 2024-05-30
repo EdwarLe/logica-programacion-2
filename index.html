@@ -4,21 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Weather Converter</title>
 </head>
 
 <body>
     <main>
-        <h1>Weather Converter</h1>
-        <section>
-            <div>
-                <label for="celcius">Please add Celcius Value</label>
-                <input type="text" placeholder="e.g: 45">
-            </div>
-            <div>
-                <div class="kelvin">°K: <span></span></div>
-                <div class="fahrenheit">°F: <span></span></div>
-            </div>
+        <section class="container">
+            <h1>Weather Converter</h1>
+            <section class="data-container">
+                <form id="form">
+                    <div class="form-input">
+                        <label for="input-celcius">Please add Celcius Value</label>
+                        <input type="text" placeholder="e.g: 45" id="input-celcius" name="input-celcius" value="">
+                        <span id="msg-error"></span>
+                    </div>
+                    <button type="submit">Convert</button>
+                </form>
+                <div class="degrees">
+                    <p class="kelvin">°K: <span id="kelvin"></span></p>
+                    <p class="fahrenheit">°F: <span id="fahrenheit"></span></p>
+                </div>
+            </section>
         </section>
     </main>
     <script src="./index.js"></script>
